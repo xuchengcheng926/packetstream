@@ -3,7 +3,7 @@ services:
   packetstream:
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 10
       restart_policy:
         condition: on-failure
         max_attempts: 2
@@ -13,9 +13,7 @@ services:
           memory: '30M'
     image: packetstream/psclient:latest
     environment: 
-      - CID=${CID}
-      - http_proxy=${http_proxy}
-      - https_proxy=${https_proxy}
+      - CID=2MyD
     logging: 
       driver: json-file
       options:
