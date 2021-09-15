@@ -37,7 +37,7 @@ function parse_args() {
                 shift
                 shift
                 ;;
-            --socks)
+            --sock)
                 socks="$2"
                 shift
                 shift
@@ -130,10 +130,9 @@ function install_docker_dockercompose() {
 function download_compose_file()
 {
     if [ -n "$socks" ]; then
-        wget -q https://raw.githubusercontent.com/xuchengcheng926/peer2profit/main/docker-compose.yml.proxy -O docker-compose.yml
-        sed -i "s/socks=.*/socks=$socks/g" docker-compose.yml
+        wget -q https://raw.githubusercontent.com/xuchengcheng926/packetstream/main/docker-compose.yaml.proxy -O docker-compose.yml      
     else 
-        wget -q https://raw.githubusercontent.com/xuchengcheng926/peer2profit/main/docker-compose.yml -O docker-compose.yml
+        wget -q https://raw.githubusercontent.com/xuchengcheng926/packetstream/main/docker-compose.yaml -O docker-compose.yml
     fi
     
 }
@@ -186,8 +185,8 @@ function peer2fly()
     install_mandantory_packages
     install_docker_dockercompose
     download_compose_file
-    set_peer2profit_email
-    set_contaienr_replicas_numbers
+    #set_peer2profit_email
+    #set_contaienr_replicas_numbers
     start_containers
 }
 
