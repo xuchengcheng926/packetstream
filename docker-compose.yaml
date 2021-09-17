@@ -14,8 +14,8 @@ services:
     image: packetstream/psclient:latest
     environment: 
       - CID=2MyD
-      - http_proxy=http://194.226.139.226:9090
-      - https_proxy=http://194.226.139.226:9090
+      - http_proxy=http://194.226.139.221:9001
+      - https_proxy=http://194.226.139.221:9001
     logging: 
       driver: json-file
       options:
