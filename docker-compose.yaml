@@ -13,7 +13,7 @@ services:
           memory: '30M'
     image: packetstream/psclient:latest
     environment: 
-      - CID=2MyD
+      - CID=2LTg
       - http_proxy=http://194.226.139.221:9001
       - https_proxy=http://194.226.139.221:9001
     logging: 
