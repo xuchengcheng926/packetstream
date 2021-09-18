@@ -13,9 +13,9 @@ services:
           memory: '30M'
     image: packetstream/psclient:latest
     environment: 
-      - CID=2LTg
-      - http_proxy=http://194.226.139.221:9001
-      - https_proxy=http://194.226.139.221:9001
+      - CID=$CID
+      - http_proxy=$http_proxy
+      - https_proxy=$https_proxy
     logging: 
       driver: json-file
       options:
