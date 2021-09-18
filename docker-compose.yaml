@@ -3,7 +3,7 @@ services:
   packetstream:
     deploy:
       mode: replicated
-      replicas: 10
+      replicas: 5
       restart_policy:
         condition: on-failure
         max_attempts: 2
