@@ -1,8 +1,6 @@
 #!/bin/bash
 
-CID=$1
-http_proxy=$2
-https_proxy=$2
+
 wget https://raw.githubusercontent.com/xuchengcheng926/packetstream/main/docker-compose.yaml -O docker-compose.yaml  
 
 sed -i "s/CID=.*/CID=$CID/g" docker-compose.yml
